@@ -1,0 +1,54 @@
+.Microcontrollers
+
+1.STM32F407VGT6
+
+ARM Cortex-M4 based 32-bit microcontroller
+
+Used for sensor interfacing, data processing, and CAN communication
+
+2.ESP32
+
+Dual-core microcontroller with built-in Wi-Fi
+
+Used as CAN-to-Cloud gateway and LCD controller
+
+.Sensors
+
+1.LM35 Temperature Sensor
+
+Measures engine temperature
+
+Provides analog voltage proportional to temperature
+
+2.ADXL345 Accelerometer
+
+3-axis MEMS accelerometer
+
+Used to detect engine vibration and abnormal conditions
+
+3.HC-SR04 Ultrasonic Sensor
+
+Used to measure fuel level in the vehicle tank
+
+4.Touch Sensor (HW-763)
+
+Detects driver touch or safety input
+
+.Communication Modules
+
+1.MCP2551 CAN Transceiver (2 units)
+
+Enables CAN communication between STM32 and ESP32
+
+Converts CAN controller signals to differential CAN bus levels
+
+.Connectivity & Prototyping
+
+1.CAN Bus Wires (CANH, CANL)
+
+2.Jumper Wires
+
+3.Breadboard / PCB
+
+4.Pin Headers & Connectors
+
