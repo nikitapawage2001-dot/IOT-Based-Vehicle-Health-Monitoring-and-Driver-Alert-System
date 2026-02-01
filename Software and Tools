@@ -1,0 +1,46 @@
+🔹 Embedded Development Tools
+ .STM32CubeIde
+Used for STM32F407 firmware development
+Peripheral configuration (ADC, CAN, I2C, GPIO, TIM)
+Code generation using HAL drivers
+Debugging using ST-LINK
+
+.Arduino IDE
+Used for ESP32 programming
+CAN data reception and processing
+Wi-Fi and cloud communication
+
+🔹 Programming Languages
+  .Embedded C
+STM32 firmware development
+Low-level peripheral control and CAN communication
+.C / C++ (Arduino framework)
+ESP32 firmware development
+
+🔹 Device Drivers & Frameworks
+.STM32 HAL (Hardware Abstraction Layer)
+ADC, CAN, I2C, GPIO, TIM configuration
+
+.ESP32 Arduino Framework
+Wi-Fi stack
+LCD interfacing
+CAN communication libraries
+
+🔹 Communication & Networking
+.CAN Protocol
+Automotive communication between STM32 and ESP32
+
+.I2C Protocol
+Communication with ADXL345 accelerometer
+
+.ADC Interface
+Analog temperature measurement using LM35
+
+.Wi-Fi
+ESP32 cloud connectivity
+
+🔹 Cloud Platform
+.Amazon Web Services (AWS)
+Used for cloud-based vehicle data monitoring
+Supports IoT / HTTP / MQTT communication
+Enables remote access to vehicle health parameters
