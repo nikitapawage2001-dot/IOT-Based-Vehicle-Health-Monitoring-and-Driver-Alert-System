@@ -1,0 +1,2 @@
+# IOT-Based-Vehicle-Health-Monitoring-and-Driver-Alert-System
+Smart Vehicle Health Monitoring System monitors real-time vehicle parameters using STM32 and ESP32. Sensors measure temperature, vibration, and fuel level. Data is transmitted over CAN, displayed on LCD, and uploaded to AWS cloud for remote monitoring, fault detection, and future predictive maintenance. Designed for automotive applications.
