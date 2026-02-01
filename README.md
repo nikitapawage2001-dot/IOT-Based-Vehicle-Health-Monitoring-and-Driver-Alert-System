@@ -1,45 +1,139 @@
-# IOT-Based-Vehicle-Health-Monitoring-and-Driver-Alert-System
-Smart Vehicle Health Monitoring System monitors real-time vehicle parameters using STM32 and ESP32. Sensors measure temperature, vibration, and fuel level. Data is transmitted over CAN, displayed on LCD, and uploaded to AWS cloud for remote monitoring, fault detection, and future predictive maintenance. Designed for automotive applications.
 
-Project Overview
 
-The Smart Vehicle Health Monitoring System is an embedded automotive system designed to monitor critical vehicle parameters such as engine temperature, vibration, fuel level, and driver touch status in real time.
-The system uses CAN communication to transmit sensor data between controllers and uploads vehicle health data to the AWS cloud for remote monitoring.
+# 🚗 IoT Based Vehicle Health Monitoring and Driver Alert System Using CAN
 
-This project demonstrates automotive-grade communication, embedded firmware design, and cloud integration, making it suitable for core embedded / automotive job profiles.
+A comprehensive **real-time embedded and IoT-based system** designed to monitor vehicle health parameters and driver safety conditions using an **automotive-grade CAN communication network** and **cloud-based alerting**. The system enables real-time monitoring, fault detection, and proactive alerts for improved safety and reliability.
 
-Objectives
 
-Monitor real-time vehicle health parameters
+## 📋 Overview
 
-Detect abnormal engine conditions early
+This project presents a real-time Vehicle Health Monitoring and Driver Alert System designed to enhance vehicle safety and reliability. The system continuously monitors engine operating conditions and driver hand presence on the steering wheel, processes the data locally, and communicates it using an automotive-grade CAN protocol.
 
-Use CAN protocol for reliable automotive communication
+<p align="center"> <img src="OUTPUT_IMAGES/Engine.png" width="300"/> <img src="OUTPUT_IMAGES/touch.png" width="300"/> </p>
 
-Display data locally on LCD
+Engine-related parameters are analyzed in real time to detect abnormal conditions, while the driver alert mechanism identifies unsafe driving behavior such as removing hands from the steering wheel. The processed information is displayed locally on a TFT display and simultaneously transmitted to the cloud for remote monitoring.
 
-Upload vehicle data to cloud (AWS) for remote access
+An event-driven alert mechanism generates email notifications whenever predefined safety thresholds are exceeded, enabling early fault detection and proactive response. The overall system follows a scalable, reliable, and automotive-style architecture, making it suitable for real-world vehicle monitoring and driver safety applications.
 
-Design a scalable architecture for future automotive features
+## 🧩 System Block Diagram
 
-System Architecture
+<p align="center">
+  <img src="Block_Diagram/block_diagram.jpeg" width="900"/>
+</p>
 
-The system is divided into two embedded nodes connected via CAN bus:
+This block diagram shows the **transmitter–receiver architecture** of the system, where sensor data is processed by STM32, transmitted over CAN, and sent to the cloud via ESP32.
 
-🔹 Node 1 – Vehicle Sensor Node
+## ⚙️ Key Functionalities
 
-Controller: STM32F407VGT6
+### 1️⃣ 🔥 Real-Time Engine Performance Monitoring
+Continuous monitoring of critical engine parameters:
+- Engine temperature  
+- Engine oil level  
+- Engine vibration  
 
-Collects sensor data
+The collected data is analyzed to evaluate engine health and detect abnormal operating conditions.
 
-Sends data over CAN bus
+### 2️⃣ 👤 Driver Alert System
+- Monitoring of driver hand presence on the steering wheel  
+- Dual touch-sensor logic to detect unsafe hand removal  
+- Alerts generated when unsafe driving behavior is detected
 
-🔹 Node 2 – Gateway & Cloud Node
+  
+### 3️⃣ 🔗 CAN-Based Communication
+- Reliable and real-time data transfer using **CAN protocol**  
+- Sensor data transmitted between ECUs with error detection  
+- Automotive-grade communication ensures robustness and noise immunity
 
-Controller: ESP32
+  
+### 4️⃣ 📺 Local Data Visualization
+- Real-time system status and sensor values displayed on a **TFT display connected to ESP32**  
+- Ensures local monitoring even without cloud connectivity
 
-Receives CAN data
+  ### 5️⃣ ☁️ IoT Cloud Integration
+- Sensor data published to **AWS IoT using MQTT**  
+- Enables remote monitoring and system analysis  
+- Supports scalability for fleet or multi-vehicle applications
 
-Displays data on LCD
+  ### 6️⃣ ⚠️ Real-Time Alerts & Notifications
+- Predefined threshold-based alert mechanism  
+- **AWS SNS** used to generate real-time **email alerts**  
+- Alerts triggered during abnormal engine conditions or unsafe driving behavior  
 
-Sends data to AWS cloud via Wi-Fi
+---
+
+## 🧰 Software Tools & Technologies
+
+- Embedded C for STM32 firmware development  
+- Arduino / ESP-IDF for ESP32 programming  
+- CAN protocol using MCP2551 CAN controller  
+- FreeRTOS for real-time task management  
+- AWS IoT Core (MQTT) for cloud communication  
+- AWS SNS for email alert notifications  
+
+## 🛠️ System Implementation Steps
+
+### Step 1️⃣: Hardware Setup
+- Sensor interfacing and ECU integration  
+- CAN bus configuration between nodes  
+- ESP32 gateway setup for display and IoT  
+
+---
+
+### Step 2️⃣: Firmware Development
+- Sensor data acquisition and processing  
+- CAN message framing and transmission  
+- ESP32 data reception and TFT display update  
+- MQTT data publishing to AWS IoT  
+
+---
+
+### Step 3️⃣: Cloud Configuration
+- AWS IoT device and policy configuration  
+- MQTT topic creation  
+- AWS IoT rules for threshold detection  
+- SNS topic and email subscription setup
+
+  ### Step 4️⃣: Testing & Validation
+- Sensor calibration and validation  
+- CAN communication reliability testing  
+- Threshold-based alert testing  
+- End-to-end data flow verification  
+
+---
+
+## 🛠️ Hardware Setup
+
+<p align="center">
+  <img src="Circuit_Diagram/Hardware.png" width="600"/>
+</p>
+
+The above image shows the complete hardware implementation of the system, including the STM32 controller, ESP32 gateway, sensors, CAN interface, and display modules mounted on a prototype board.
+
+## 🚀 Benefits of the System
+
+- Real-time vehicle health monitoring  
+- Improved driver safety through alerts  
+- Reliable CAN-based communication  
+- Cloud-based remote monitoring  
+- Reduced maintenance cost through early fault detection  
+- Scalable architecture for real-world deployment  
+
+---
+
+## 📸 Working Demonstration
+
+📌 Refer to the **OUTPUT_IMAGES** folder for real-time working photos, debugging screenshots, and cloud alert demonstrations.
+
+---
+
+## ✅ Conclusion
+
+The proposed system successfully demonstrates a **real-time, CAN-based vehicle health monitoring and driver alert solution** with **IoT cloud integration**. Its scalable and reliable architecture makes it suitable for modern automotive and fleet monitoring applications.
+
+
+## 🔮 Future Scope
+
+- Integration of additional vehicle sensors (RPM, TPMS, battery health)  
+- Predictive maintenance using data analytics  
+- Mobile or web dashboard for monitoring  
+- Enhanced security for CAN and IoT communication  
